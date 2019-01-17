@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  youtuber-comment:
+    image: python:3.7.2-alpine
+    container_name: "youtuber24"
+    volumes:
+      - "./src:/home/youtuber24/src"
+    environment:
+      - TZ=Asia/Tokyo
+      - apikey=RECRUIT_TALK_API_KEY
+    privileged: true
+    working_dir: "/home/youtuber24/src"
+    tty: true
